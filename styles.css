@@ -1,0 +1,133 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.person {
+    margin: 20px;
+    width: calc(33.33% - 40px);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.person:hover {
+    transform: scale(1.05);
+}
+
+.donut {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    background: conic-gradient(#ff6b6b 0deg 180deg, #4ecdc4 180deg 360deg);
+}
+
+.inner-circle {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+.first-person-view {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.first-person-view:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .person {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .person {
+        width: calc(50% - 40px);
+    }
+    .donut {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .person {
+        width: 100%;
+    }
+    .donut {
+        width: 100px;
+        height: 100px;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin: 5px 0;
+    }
+}
